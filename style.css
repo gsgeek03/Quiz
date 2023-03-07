@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:wght@100;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #2193b0;     
+    background: -webkit-linear-gradient(to bottom, #4bb3cb, #2193b0); 
+    background: linear-gradient(45deg, #4bb2c9, #2193b0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+/* heading of page*/
+.title{
+    color:whitesmoke;
+    text-align: center;
+    font-family: 'Rampart One', cursive;
+    font-size: 5rem;
+    text-shadow: 4px 4px black;
+    transition: text-shadow ease 0.7s;
+
+}
+.title:hover #icon{
+    text-shadow: 1px 1px black;
+}
+.title:hover {
+    text-shadow: 1px 1px black;
+}
+
+/* Question section of page */
+
+.section{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto',sans-serif;
+    margin-top: 20px;
+}
+.quiz{
+    background-color: white;
+    width:50vw;
+    height: auto;
+    border-radius: 10px;
+}
+.question{ margin: 5px;}
+#icon{
+    transition: all ease 0.5s;
+    text-shadow: 6px 6px rgb(35, 32, 32);
+    transform: rotateY(10deg) rotateZ(-5deg) rotateX(-25deg);
+}
+.options{
+    display: flex;
+    flex-direction: column;
+}
+.option{
+    margin: 1.5rem;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+.submit{
+    background-color: #2193b0;
+    color: antiquewhite;
+    border: 0;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgb(37, 33, 33);
+    font-size: 1.5rem;
+    transition: box-shadow ease 0.5s;
+    margin-bottom: 5px;
+}
+.submit:hover{
+    box-shadow: 0px 0px black;
+}
+@media screen and (max-width:500px) {
+    .quiz{
+        width: 90vw;
+    }
+}
+@media screen and (orientation:landscape) and (max-width:1000px) and (max-height:500px){
+    .quiz{
+        width: 50vw;
+        height: auto;
+    }
+    .options{
+        display: grid;
+        grid-template-row: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+    .option{
+        width: 9rem;
+    }
+    
+}
